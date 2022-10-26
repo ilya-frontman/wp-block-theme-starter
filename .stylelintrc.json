@@ -1,8 +1,20 @@
 {
-	"extends": "@wordpress/stylelint-config",
+	"extends": [
+		"@wordpress/stylelint-config",
+		"stylelint-config-standard",
+		"stylelint-config-rational-order",
+		"stylelint-prettier/recommended"
+	],
+	"plugins": ["stylelint-order"],
 	"rules": {
+		"order/order": ["custom-properties", "declarations", "rules", "at-rules"],
+		"order/properties-order": ["width", "height"],
 		"number-leading-zero": null,
 		"selector-class-pattern": null,
-		"selector-id-pattern": null
+		"selector-id-pattern": null,
+		"no-descending-specificity": null,
+		"string-quotes": "single",
+		"custom-property-pattern": null,
+		"comment-whitespace-inside": "always"
 	}
 }
