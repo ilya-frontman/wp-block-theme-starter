@@ -9,10 +9,10 @@
 .is-style-nadryv-production-flat-button .wp-block-button__link:focus,
 .is-style-nadryv-production-flat-button .wp-block-button__link:active,
 .is-style-nadryv-production-flat-button .wp-block-button__link:visited {
-	box-shadow: none;
-	border-radius: 0;
 	margin-top: initial;
 	margin-bottom: initial;
+	border-radius: 0;
+	box-shadow: none;
 }
 
 /* Button with shadow */
