@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo -e "===\n>> Pre-commit Hook: Checking linters"
+npm run linters
+echo -e "===\n>> Pre-commit Hook: End linters part"
+
+echo -e "===\n>> Pre-commit Hook: Run formaters code"
+npm run formaters
+echo -e "===\n>> Pre-commit Hook: End formaters part"
