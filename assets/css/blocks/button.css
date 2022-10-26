@@ -5,23 +5,23 @@
 .wp-block-button__link:focus,
 .wp-block-button__link:hover {
 	color: var(--wp--preset--color--foreground);
-	filter: brightness(94%) !important;
 	box-shadow: var(--wp--custom--small-button-shadow);
+	filter: brightness(94%) !important;
 }
 
 .wp-block-button__link:active {
-	border-color: rgba(0, 0, 0, 0.05);
-	box-shadow: var(--wp--custom--button-highlight);
-	color: var(--wp--preset--color--foreground);
-	filter: brightness(93%) !important;
 	margin-top: 1px;
 	margin-bottom: -1px;
+	color: var(--wp--preset--color--foreground);
+	border-color: rgb(0 0 0 / 5%);
+	box-shadow: var(--wp--custom--button-highlight);
+	filter: brightness(93%) !important;
 }
 
 .wp-block-button__link:visited {
-	background-color: initial;
-	border-color: rgba(0, 0, 0, 0.05);
 	color: var(--wp--preset--color--foreground);
+	background-color: initial;
+	border-color: rgb(0 0 0 / 5%);
 	box-shadow: var(--wp--custom--small-button-shadow);
 }
 
@@ -32,10 +32,10 @@
 
 /* Match the editor */
 .wp-block-buttons > .wp-block-button {
-	margin-top: .5em;
+	margin-top: 0.5em;
 }
 
 .wp-block-button__link svg {
 	vertical-align: middle;
-	fill: currentColor;
+	fill: currentcolor;
 }
