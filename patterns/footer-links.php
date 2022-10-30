@@ -2,11 +2,11 @@
 
 /**
  * Title: Footer links
- * Slug: nadryv-production/footer-links
+ * Slug: wp-block-theme/footer-links
  * Categories: text
  * Inserter: no
  *
- * @package nadryv-production
+ * @package wp-block-theme
  * @since 1.0.0
  */
 
@@ -16,8 +16,8 @@
     <!-- wp:group {"layout":{"type":"flex","allowOrientation":false}} -->
     <div class="wp-block-group">
         <!-- wp:paragraph {"fontSize":"extra-small"} -->
-        <p class="has-extra-small-font-size"><?php esc_html_e('Copyright', 'nadryv-production');
-                                                echo ' ' . date_i18n(_x('Y', 'copyright date format', 'nadryv-production')); ?></p><!-- /wp:paragraph -->
+        <p class="has-extra-small-font-size"><?php esc_html_e('Copyright', 'wp-block-theme');
+                                                echo ' ' . date_i18n(_x('Y', 'copyright date format', 'wp-block-theme')); ?></p><!-- /wp:paragraph -->
         <!-- wp:site-title {"level":0, "fontSize":"extra-small"} /-->
         <?php echo nadryv_production_privacy(); ?>
         <!-- wp:social-links {"className":"is-style-logos-only"} -->

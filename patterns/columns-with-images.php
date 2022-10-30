@@ -2,11 +2,11 @@
 
 /**
  * Title: Columns with circular images
- * Slug: nadryv-production/columns-with-images
+ * Slug: wp-block-theme/columns-with-images
  * Categories: featured
  * Block Types: core/image, core/columns
  *
- * @package nadryv-production
+ * @package wp-block-theme
  * @since 1.0.0
  */
 
@@ -21,14 +21,14 @@
 		</div>
 		<!-- /wp:image -->
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?php echo esc_html_x('Sample content. Replace the text with your own content.', 'sample content', 'nadryv-production'); ?></p>
+		<p class="has-text-align-center"><?php echo esc_html_x('Sample content. Replace the text with your own content.', 'sample content', 'wp-block-theme'); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:column -->
 	<!-- wp:column -->
 	<div class="wp-block-column">
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?php echo esc_html_x('Sample content. Replace the text with your own content.', 'sample content', 'nadryv-production'); ?></p>
+		<p class="has-text-align-center"><?php echo esc_html_x('Sample content. Replace the text with your own content.', 'sample content', 'wp-block-theme'); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:image {"align":"center","width":200,"height":200,"sizeSlug":"large","linkDestination":"none","className":"is-style-rounded"} -->
 		<div class="wp-block-image is-style-rounded">
@@ -45,7 +45,7 @@
 		</div>
 		<!-- /wp:image -->
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center"><?php echo esc_html_x('Sample content. Replace the text with your own content.', 'sample content', 'nadryv-production'); ?></p>
+		<p class="has-text-align-center"><?php echo esc_html_x('Sample content. Replace the text with your own content.', 'sample content', 'wp-block-theme'); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:column -->
