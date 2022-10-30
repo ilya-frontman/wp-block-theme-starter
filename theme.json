@@ -64,6 +64,7 @@
 			"wideSize": "1840px"
 		},
 		"typography": {
+			"fontWeight": true,
 			"dropCap": false,
 			"fontFamilies": [
 				{
@@ -80,6 +81,11 @@
 					"name": "Monospace",
 					"slug": "monospace",
 					"fontFamily": "Consolas,Menlo,Monaco,\"SF Mono\",\"DejaVu Sans Mono\",\"Roboto Mono\",\"Courier New\",Courier,monospace"
+				},
+				{
+					"name": "Local Roboto",
+					"slug": "roboto",
+					"fontFamily": "Roboto,sans-serif"
 				}
 			],
 			"fontSizes": [
