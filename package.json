@@ -1,7 +1,7 @@
 {
-	"name": "nadryv-production",
+	"name": "wp-block-theme",
 	"version": "1.0.0",
-	"description": "Block based corp theme",
+	"description": "Block based theme",
 	"author": "ilya frontman",
 	"private": true,
 	"keywords": [

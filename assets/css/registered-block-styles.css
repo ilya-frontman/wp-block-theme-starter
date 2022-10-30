@@ -4,11 +4,11 @@
  */
 
 /* Flat button */
-.is-style-nadryv-production-flat-button .wp-block-button__link,
-.is-style-nadryv-production-flat-button .wp-block-button__link:hover,
-.is-style-nadryv-production-flat-button .wp-block-button__link:focus,
-.is-style-nadryv-production-flat-button .wp-block-button__link:active,
-.is-style-nadryv-production-flat-button .wp-block-button__link:visited {
+.is-style-wp-block-theme-flat-button .wp-block-button__link,
+.is-style-wp-block-theme-flat-button .wp-block-button__link:hover,
+.is-style-wp-block-theme-flat-button .wp-block-button__link:focus,
+.is-style-wp-block-theme-flat-button .wp-block-button__link:active,
+.is-style-wp-block-theme-flat-button .wp-block-button__link:visited {
 	margin-top: initial;
 	margin-bottom: initial;
 	border-radius: 0;
@@ -16,13 +16,13 @@
 }
 
 /* Button with shadow */
-.is-style-nadryv-production-shadow-button .wp-block-button__link,
-.is-style-nadryv-production-shadow-button .wp-block-button__link:hover,
-.is-style-nadryv-production-shadow-button .wp-block-button__link:focus,
-.is-style-nadryv-production-shadow-button .wp-block-button__link:visited {
+.is-style-wp-block-theme-shadow-button .wp-block-button__link,
+.is-style-wp-block-theme-shadow-button .wp-block-button__link:hover,
+.is-style-wp-block-theme-shadow-button .wp-block-button__link:focus,
+.is-style-wp-block-theme-shadow-button .wp-block-button__link:visited {
 	box-shadow: var(--wp--custom--button-shadow);
 }
 
-.is-style-nadryv-production-shadow-button .wp-block-button__link:active {
+.is-style-wp-block-theme-shadow-button .wp-block-button__link:active {
 	box-shadow: var(--wp--custom--button-highlight);
 }

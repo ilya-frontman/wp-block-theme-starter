@@ -3,6 +3,6 @@
 /**
  * This file has been left empty on purpose. Silence is golden.
  *
- * @package nadryv-production
+ * @package wp-block-theme
  * @since 1.0.0
  */
