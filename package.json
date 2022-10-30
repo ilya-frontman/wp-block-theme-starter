@@ -35,7 +35,8 @@
 		"stylelint-config-rational-order": "^0.1.2",
 		"stylelint-config-standard": "^29.0.0",
 		"stylelint-order": "^5.0.0",
-		"stylelint-prettier": "^2.0.0"
+		"stylelint-prettier": "^2.0.0",
+		"gulp-ttf2woff": "^1.1.1"
 	},
 	"scripts": {
 		"start": "npx gulp watch",
