@@ -1,6 +1,7 @@
 @font-face: {
-    font-weight: 400;
-    font-family: Roboto;
-    src: url('Roboto-Regular.woff') format('woff'), url('Roboto-Regular.woff') format('truetype');
-    font-style: normal;
+	font-weight: 400;
+	font-family: Roboto;
+	font-style: normal;
+	src: url('Roboto-Regular.woff') format('woff'),
+		url('Roboto-Regular.ttf') format('truetype');
 }
