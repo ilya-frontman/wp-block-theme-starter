@@ -1,10 +1,21 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/bash
 
-echo -e "===\n>> Pre-commit Hook: Checking linters"
+echo -e "===\n>> Pre-commit Hook: Checking branch name..."
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PROTECTED_BRANCHES="^(master|develop|main)"
+
+if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
+then
+  echo -e "\n🚫 Cannot commit to $BRANCH branch, please create your own branch and use PR." && exit 1
+fi
+
+echo -e ">> Finish checking branch name.\n==="
+
+echo -e "===>> Pre-commit Hook: Run linters"
 npm run linters
-echo -e "===\n>> Pre-commit Hook: End linters part"
+echo -e "===>> Pre-commit Hook: Finish linters"
 
-echo -e "===\n>> Pre-commit Hook: Run formaters code"
+echo -e "===>> Pre-commit Hook: Run formaters"
 npm run formaters
-echo -e "===\n>> Pre-commit Hook: End formaters part"
+echo -e "===>> Pre-commit Hook: Finish formaters"
