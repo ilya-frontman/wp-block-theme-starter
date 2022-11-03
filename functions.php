@@ -65,7 +65,7 @@ function wp_block_theme_styles()
 
 	wp_enqueue_style(
 		'wp-block-theme-custom-fonts',
-		get_theme_file_uri('/assets/fonts/custom-fonts.min.css'),
+		get_theme_file_uri('/assets/css/fonts.min.css'),
 		[],
 		WP_BLOCK_THEME_STARTER_VERSION
 	);
