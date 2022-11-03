@@ -3,22 +3,21 @@ const gulp = require('gulp'),
 	concatCss = require('gulp-concat-css'),
 	cssnano = require('gulp-cssnano'),
 	rename = require('gulp-rename'),
+	sass = require('gulp-sass')(require('sass')),
 	ttf2woff = require('gulp-ttf2woff');
 
 gulp.task('watch', function () {
-	gulp
-		.watch(['assets/css/**/*.css'])
-		.on(
-			'change',
-			gulp.series(
-				'clean-shared',
-				'clean-blocks',
-				'clean-custom-fonts',
-				'minify-shared',
-				'minify-blocks',
-				'minify-custom-fonts'
-			)
-		);
+	gulp.watch(['assets/scss/**/*.scss']).on(
+		'change',
+		gulp.series(
+			'clean-shared',
+			'clean-blocks',
+			'clean-custom-fonts',
+			'minify-shared',
+			'minify-blocks',
+			'minify-custom-fonts'
+		)
+	);
 });
 
 gulp.task('clean-shared', function () {
@@ -48,7 +47,8 @@ gulp.task('ttf2woff', function () {
 
 gulp.task('minify-shared', function () {
 	return gulp
-		.src('assets/css/*.css')
+		.src('assets/scss/*.scss')
+		.pipe(sass())
 		.pipe(concatCss('style-shared.min.css'))
 		.pipe(cssnano())
 		.pipe(gulp.dest('assets/css/'));
@@ -56,7 +56,7 @@ gulp.task('minify-shared', function () {
 
 gulp.task('clean-custom-fonts', function () {
 	return gulp
-		.src('assets/fonts/custom-fonts.min.css', {
+		.src('assets/css/fonts.min.css', {
 			read: false,
 			allowEmpty: true,
 		})
@@ -65,15 +65,17 @@ gulp.task('clean-custom-fonts', function () {
 
 gulp.task('minify-custom-fonts', function () {
 	return gulp
-		.src('assets/fonts/custom-fonts.css')
-		.pipe(concatCss('custom-fonts.min.css'))
+		.src('assets/fonts/*.scss')
+		.pipe(sass())
+		.pipe(concatCss('fonts.min.css'))
 		.pipe(cssnano({ discardUnused: false }))
-		.pipe(gulp.dest('assets/fonts/'));
+		.pipe(gulp.dest('assets/css/'));
 });
 
 gulp.task('minify-blocks', function () {
 	return gulp
-		.src('assets/css/blocks/*.css')
+		.src('assets/scss/blocks/*.scss')
+		.pipe(sass())
 		.pipe(cssnano())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('assets/css/blocks'));
