@@ -1,0 +1,5 @@
+{
+	"*": "npm run format",
+	"*.js": "npm run eslint && npm run eslint:fix",
+	"*.scss": "npm run stylelint && npm run stylelint:fix"
+}

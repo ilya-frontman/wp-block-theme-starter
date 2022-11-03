@@ -12,10 +12,7 @@ fi
 
 echo -e ">> Finish checking branch name.\n==="
 
-echo -e "===>> Pre-commit Hook: Run linters"
-npm run linters
-echo -e "===>> Pre-commit Hook: Finish linters"
+echo -e "===>> Pre-commit Hook: Run linters and formaters"
+npx lint-staged
+echo -e "===>> Pre-commit Hook: Finish linters and formaters"
 
-echo -e "===>> Pre-commit Hook: Run formaters"
-npm run formaters
-echo -e "===>> Pre-commit Hook: Finish formaters"
