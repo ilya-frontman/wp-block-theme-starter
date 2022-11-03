@@ -5,17 +5,17 @@
 .wp-block-button__link:focus,
 .wp-block-button__link:hover {
 	color: var(--wp--preset--color--foreground);
-	box-shadow: var(--wp--custom--small-button-shadow);
 	filter: brightness(94%) !important;
+	box-shadow: var(--wp--custom--small-button-shadow);
 }
 
 .wp-block-button__link:active {
 	margin-top: 1px;
 	margin-bottom: -1px;
 	color: var(--wp--preset--color--foreground);
+	filter: brightness(93%) !important;
 	border-color: rgb(0 0 0 / 5%);
 	box-shadow: var(--wp--custom--button-highlight);
-	filter: brightness(93%) !important;
 }
 
 .wp-block-button__link:visited {

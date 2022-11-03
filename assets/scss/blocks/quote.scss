@@ -1,7 +1,7 @@
 .wp-block-quote {
 	padding-left: 0;
-	border: none;
 	quotes: initial;
+	border: none;
 }
 
 .wp-block-quote p,
@@ -16,17 +16,17 @@
 .wp-block-quote::before,
 .wp-block-quote.has-text-align-right p::before {
 	position: absolute;
-	color: var(--wp--preset--color--primary);
-	font-weight: 700;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 4rem;
-	font-family: 'Times New Roman', Times, serif;
+	font-weight: 700;
 	line-height: 1;
-	content: '\201C';
+	color: var(--wp--preset--color--primary);
+	content: "\201C";
 }
 
 .wp-block-quote.has-text-align-center::before,
 .wp-block-quote.has-text-align-right::before {
-	content: ' ';
+	content: " ";
 }
 
 .wp-block-quote.has-text-align-right {
