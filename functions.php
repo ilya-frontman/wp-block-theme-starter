@@ -81,3 +81,43 @@ require_once get_theme_file_path('inc/block-pattern-helper.php');
 // Load custom-fonts
 include_once get_theme_file_path('hooks/load-fonts.php');
 add_action('wp_head', 'load_web_fonts');
+
+// Register menu
+function wp_block_theme_register_menus()
+{
+	register_nav_menus(
+		array(
+			'primary-menu' => __('Primary Menu', 'wp-block-theme'),
+			'secondary-menu' => __('Secondary Menu', 'wp-block-theme'),
+		)
+	);
+}
+add_action('init', 'wp_block_theme_register_menus');
+
+// Add support custom-logo
+function wp_block_theme_register_custom_logo()
+{
+	add_theme_support('title-tag');
+	add_theme_support('custom-logo', array(
+		'height' => 80,
+		'width'  => 160,
+		'flex-height' => true,
+		'flex-width' => true,
+	));
+}
+add_action('after_setup_theme', 'wp_block_theme_register_custom_logo');
+
+// Add classic customizer edit: logo, favicon, menu
+function wp_block_theme_customize_register($wp_customize)
+{
+	$wp_customize->add_setting('setting_id', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'theme_supports' => '', // Rarely needed.
+		'default' => '',
+		'transport' => 'refresh', // or postMessage
+		'sanitize_callback' => '',
+		'sanitize_js_callback' => '', // Basically to_json.
+	));
+}
+add_action('customize_register', 'wp_block_theme_customize_register');
