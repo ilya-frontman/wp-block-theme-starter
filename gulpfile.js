@@ -4,7 +4,8 @@ const gulp = require('gulp'),
 	cssnano = require('gulp-cssnano'),
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass')(require('sass')),
-	ttf2woff = require('gulp-ttf2woff');
+	ttf2woff = require('gulp-ttf2woff'),
+	ttf2woff2 = require('gulp-ttf2woff2');
 
 gulp.task('watch', function () {
 	gulp.watch(['assets/scss/**/*.scss']).on(
@@ -42,6 +43,13 @@ gulp.task('ttf2woff', function () {
 	return gulp
 		.src(['assets/fonts/*.ttf'])
 		.pipe(ttf2woff())
+		.pipe(gulp.dest('assets/fonts/'));
+});
+
+gulp.task('ttf2woff2', function () {
+	return gulp
+		.src(['assets/fonts/*.ttf'])
+		.pipe(ttf2woff2())
 		.pipe(gulp.dest('assets/fonts/'));
 });
 
@@ -85,6 +93,7 @@ gulp.task(
 	'default',
 	gulp.series(
 		'ttf2woff',
+		'ttf2woff2',
 		'clean-shared',
 		'clean-blocks',
 		'clean-custom-fonts',
